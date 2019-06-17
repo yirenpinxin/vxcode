@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index", 
+    "pages/Administrators/Administrators",   
+    "pages/searchPage/searchPage",
+    "pages/publish/publish",
+    "pages/goodDetail/goodDetail",
+    "pages/center/center",
+    "pages/myPublish/myPublish"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#27C79A",
+    "navigationBarTitleText": "失物招领",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/11.png",
+        "selectedIconPath": "/images/11.1.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "/images/14.png",
+        "selectedIconPath": "/images/14.4.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "/images/13.png",
+        "selectedIconPath": "/images/13.3.png"
+      },
+      {
+        "pagePath": "pages/Administrators/Administrators",
+        "text": "管理员",
+        "iconPath": "/images/16.png",
+        "selectedIconPath": "/images/16.6.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

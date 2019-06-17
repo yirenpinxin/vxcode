@@ -1,0 +1,34 @@
+/* miniprogram/pages/center/center.wxss */
+.avatar{
+    height:300rpx;
+    background:#27C79A;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column; 
+    color:#fff;
+  }
+  
+  .avatar button{
+    width:160rpx;
+    height:160rpx;
+  border:1rpx solid rgba(0,0,0,.3);
+    border-radius:50%;
+    margin-bottom:10rpx;
+  }
+
+
+.center-list .center-list-item{
+  border-bottom:2px solid #F2F2F2;
+  padding:24rpx; 
+ }
+ .center-list .center-list-item button{
+    padding:0;
+    margin:0;
+    background:0;
+    width:100%;
+    text-align:left;  
+ }
+ .center-list .center-list-item button::after{
+    border:none; 
+ }

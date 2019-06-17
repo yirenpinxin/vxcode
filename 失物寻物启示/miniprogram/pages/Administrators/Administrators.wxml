@@ -1,0 +1,75 @@
+<!--miniprogram/pages/Administrators/Administrators.wxml-->
+<form class="loginManager" style="height:{{windowHeight}}px" bindsubmit="formSubmit" wx:if="{{hasGoods==false}}">
+    <view class="manager">
+        <view class="manager-item">
+            <text>账号</text>
+            <input type="text" name="manager" placeholder="请输入您的账号"></input>
+        </view>
+
+        <view class="manager-item">
+            <text>密码</text>
+            <input type="text" name="upwd" placeholder="请输入您的密码"></input>
+        </view>
+    </view>
+
+    <view class="manager-button">
+        <button form-type="submit">登录</button>
+    </view>
+</form>
+
+<view  wx:if="{{hasGoods==true}}">
+    <view class="classify">
+        <view class="classify-item {{index == change_classify?'green':''}}" wx:for="{{classify}}" wx:key="index" bindtap="change_classify" data-index="{{index}}">
+            {{item}}
+        </view>
+    </view>
+
+    <view class="divider"></view>
+    <view  hidden="{{change_classify!=0}}" class="list" style="padding-bottom:160rpx;"> 
+        <view class="list-item" wx:for="{{goodsLost}}" wx:key="index"  data-id="{{item._id}}">
+            <view class="list-item-image">
+                <image src="{{item.image_url1}}"></image>
+            </view> 
+            <view class="list-item-text">
+                <view class="item-text">
+                    <text>{{item.title}}</text>
+                    <text style="color:#27C79A;font-size:15px;">{{item.lostType}}</text>
+                </view> 
+                <view class="item-text">
+                    <text style="color:#AAAAAA;font-size:15px;">类型:{{item.AnnouncementType}}</text>
+                    <text style="color:#1E82E4;font-size:15px;" bindtap="deleteGood"  data-id="{{item._id}}">删除</text>
+                </view> 
+                <view class="item-text">
+                    <text style="color:#AAAAAA;font-size:15px;">{{item.specificDddress}}</text>
+                    <text style="color:#AAAAAA;font-size:15px;">{{item.newTime}}</text>
+                </view>  
+            </view>    
+        </view> 
+    </view>
+
+    <view  hidden="{{change_classify!=1}}"  style="padding-bottom:160rpx;">
+        <view class="list-item" wx:for="{{goodsFound}}" wx:key="index"  data-id="{{item._id}}" >
+                 <view class="list-item-image">
+                    <image src="{{item.image_url1}}"></image>
+                </view> 
+               <view class="list-item-text">
+                    <view class="item-text">
+                        <text>{{item.title}}</text>
+                        <text style="color:#27C79A;font-size:15px;">{{item.lostType}}</text>
+                    </view> 
+                    <view class="item-text">
+                        <text style="color:#AAAAAA;font-size:15px;">类型:{{item.AnnouncementType}}</text>
+                        <text style="color:#1E82E4;font-size:15px;" bindtap="deleteGood"  data-id="{{item._id}}">删除</text>
+                    </view> 
+                    <view class="item-text">
+                        <text style="color:#AAAAAA;font-size:15px;">{{item.specificDddress}}</text>
+                        <text style="color:#AAAAAA;font-size:15px;">{{item.newTime}}</text>
+                    </view>  
+                </view>    
+            </view> 
+     </view>
+   <view class="Logout" bindtap="logout">
+       <image src="/images/out.png"></image>
+     <button>管理退出</button>
+   </view>  
+</view>    

@@ -1,0 +1,105 @@
+/* miniprogram/pages/Administrators/Administrators.wxss */
+.loginManager{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:url('https://6f6b-ok666-1c8e10-1258842217.tcb.qcloud.la/login/1.jpg');
+    background-size:100% 100%;
+}
+.loginManager .manager .manager-item{
+   display:flex;
+   margin-bottom:24rpx;
+   font-size:16px;
+   align-items:center;
+}
+.loginManager .manager .manager-item text{
+   margin-right:12rpx; 
+}
+.loginManager .manager .manager-item input{
+   background:#fff;
+   border:1rpx solid #CBC8CB;
+   width:360rpx;
+   border-radius:10rpx; 
+   height:64rpx; 
+}
+
+.manager-button button{
+   width:300rpx;
+   border-radius:24rpx;
+   margin-bottom:16rpx;
+   color:#fff;
+   font-size:16px;
+} 
+.manager-button button:first-child{
+  background:#27C79A;
+}
+.manager-button button::after{
+   border:none; 
+}  
+
+.classify{
+   display:flex;
+   justify-content:space-between; 
+ }
+ .classify-item{
+   width:50%;
+   text-align:center;
+   margin:24rpx 0;
+ }
+ .classify .classify-item:first-child{
+    border-right:1px solid black;
+ }
+ .classify .classify-item:last-child{
+   border-left:1px solid black;
+ }
+ .green{
+   color:#27C79A; 
+ }
+ 
+ /*内容列表*/
+ .list-item{
+   display:flex;
+   border-bottom:1px solid #E3E5CE;
+   padding:12rpx;
+ }
+ 
+ .list-item .list-item-image image{
+   width:180rpx;
+   height:160rpx;
+ }
+ .list-item .list-item-text{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    width:75%;
+    margin-left:12rpx;
+ }
+ .list-item .list-item-text .item-text{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+ }
+ 
+ .Logout{
+   position:fixed;
+   bottom:2rpx;
+   right:12rpx; 
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   align-items:center;
+ }
+ .Logout image{
+    width:72rpx;
+    height:72rpx;
+    border-radius:50%;
+ }
+ .Logout button{
+   font-size:14px;
+   background:#fff;
+
+ }
+ .Logout button::after{
+   border:none;
+ }

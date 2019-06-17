@@ -1,0 +1,25 @@
+/* miniprogram/pages/myPublish/myPublish.wxss */
+
+/*内容列表*/
+.list-item{
+    display:flex;
+    border-bottom:1px solid #E3E5CE;
+    padding:12rpx;
+  }
+  
+  .list-item .list-item-image image{
+    width:180rpx;
+    height:160rpx;
+  }
+  .list-item .list-item-text{
+     display:flex;
+     flex-direction: column;
+     justify-content:space-around;
+     width:75%;
+     margin-left:12rpx;
+  }
+  .list-item .list-item-text .item-text{
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+  }

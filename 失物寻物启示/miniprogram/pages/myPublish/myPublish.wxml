@@ -1,0 +1,22 @@
+<!--miniprogram/pages/myPublish/myPublish.wxml-->
+<view  class="list"> 
+    <view class="list-item" wx:for="{{myPublish}}" wx:key="index" bindtap="go_goodDetail" data-id="{{item._id}}" data-browse="{{item.browseTimes}}">
+         <view class="list-item-image">
+            <image src="{{item.image_url1}}"></image>
+         </view> 
+         <view class="list-item-text">
+             <view class="item-text">
+                 <text>{{item.title}}</text>
+                 <text style="color:#27C79A;font-size:15px;">{{item.lostType}}</text>
+             </view> 
+              <view class="item-text">
+                 <text style="color:#AAAAAA;font-size:15px;">启事:{{item.AnnouncementType}}</text>
+                 <text style="color:#AAAAAA;font-size:15px;">浏览{{item.browseTimes}}次</text>
+             </view> 
+              <view class="item-text">
+                 <text style="color:#AAAAAA;font-size:15px;">{{item.specificDddress}}</text>
+                 <text style="color:#AAAAAA;font-size:15px;">{{item.newTime}}</text>
+             </view>  
+         </view>    
+    </view> 
+</view>

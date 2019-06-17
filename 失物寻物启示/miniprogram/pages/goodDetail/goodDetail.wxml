@@ -1,0 +1,63 @@
+<!--miniprogram/pages/goodDetail/goodDetail.wxml-->
+<!--miniprogram/pages/publish/publish.wxml-->
+
+  <view class="publish-item">
+       <text>标题:</text>
+       <text  >{{goodDetail.title}}</text> 
+  </view>
+  <view class="publish-item">
+       <text>启事类型:</text>
+       <view class="publish-item-size"> 
+          <text s>{{goodDetail.AnnouncementType}}</text>
+         
+       </view>
+         
+  </view>
+
+  <view class="publish-item">
+       <text>失物类别:</text>
+        <text >{{goodDetail.lostType}}</text>
+  </view>
+  <view class="divider"></view>
+
+   <view class="publish-item">
+       <text>发布日期:</text>
+       <text>{{goodDetail.newTime}}</text>
+    </view>
+    <view style="padding:24rpx;border-bottom:1px solid #EFEFEF;">
+       <text>具体地址:</text>
+        <view style="margin-top:6px;color:#AAAAAA;padding-left:160rpx; width:70%;">{{goodDetail.specificDddress}}</view>
+    </view>
+
+    <view style="padding:24rpx;border-bottom:1px solid #EFEFEF;">
+       <text>物品详情:</text>
+        <textarea style="color:#AAAAAA;padding-left:160rpx; width:70%;">{{goodDetail.goodDetail}}</textarea>
+    </view>
+     <view class="divider"></view>
+    
+    
+  <view class="publish-item">
+       <text>联系人:</text>
+       <text>{{goodDetail.contacts}}</text>
+  </view>
+
+  <view class="publish-item">
+       <text>联系电话:</text>
+       <view class="publish-item-call">
+        <text >{{goodDetail.telephone}}</text>
+        <image src="/images/call.png" bindtap="callPhone"></image>
+       </view>
+  </view>
+
+  <view style="padding:24rpx;border-bottom:1px solid #EFEFEF;" >
+       <text>图片:</text>
+       <view class="publish-add">
+            <view class="publish-add-images" wx:for="{{goodDetail.image_url}}" wx:key="index">
+               <image src="{{item}}" bindtap="previewImg" data-index="{{index}}"></image>
+            </view>
+       </view>
+  </view>
+
+
+
+

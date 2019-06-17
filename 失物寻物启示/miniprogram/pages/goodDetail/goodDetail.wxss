@@ -1,0 +1,38 @@
+/* miniprogram/pages/goodDetail/goodDetail.wxss */
+textarea{
+   width:100%; 
+   font-size:16px;
+   margin-top:16rpx;
+}
+ .publish-item{
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid #EFEFEF;
+    padding:24rpx;  
+  }
+  .publish .publish-item input{
+     text-align:right;
+  }
+  .publish-add{
+     display:flex;
+     flex-wrap:wrap;
+  }
+  .publish-add-images{
+    margin-top:24rpx;
+    margin-left:24rpx;
+  }
+  
+  .publish-add-images image{
+    width:200rpx;
+    height:200rpx;
+  }
+  .publish-item-call{
+     display:flex;
+  }
+  .publish-item-call text{
+     line-height:64rpx; 
+  }
+  .publish-item-call image{
+      height:64rpx;
+      width:64rpx;
+  }

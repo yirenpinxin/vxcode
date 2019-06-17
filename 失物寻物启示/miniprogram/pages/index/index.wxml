@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="search">
+  <view class="search-item" bindtap="go_search">
+     <image src="/images/search.png"></image>
+     <input type="text" placeholder="请输入关键字搜索"  disabled="{{true}}"/>
+  </view>
+</view>
+
+<!--轮播图-->
+<view class="slider">
+    <swiper autoplay indicator-dots="{{true}}" interval="2000">
+        <swiper-item wx:for="{{lunbo}}" wx:key="index">
+             <image src="{{item.imagepath}}"></image>
+       </swiper-item>
+    </swiper>
+</view>
+
+<view class="divider"></view>
+<view class="classify">
+     <view class="classify-item {{index == change_classify?'green':''}}" wx:for="{{classify}}" wx:key="index" bindtap="change_classify" data-index="{{index}}">
+         {{item}}
+     </view>
+</view>
+
+<view class="divider"></view>
+<view  hidden="{{change_classify!=0}}" class="list"> 
+    <view class="list-item" wx:for="{{goodsLost}}" wx:key="index" bindtap="go_goodDetail" data-id="{{item._id}}" data-browse="{{item.browseTimes}}">
+         <view class="list-item-image" >
+            <image src="{{item.image_url1}}"></image>
+         </view> 
+         <view class="list-item-text">
+             <view class="item-text">
+                 <text>{{item.title}}</text>
+                 <text style="color:#27C79A;font-size:15px;">{{item.lostType}}</text>
+             </view> 
+              <view class="item-text">
+                 <text style="color:#AAAAAA;font-size:15px;">类型:{{item.AnnouncementType}}</text>
+                 <text style="color:#AAAAAA;font-size:15px;">浏览{{item.browseTimes}}次</text>
+             </view> 
+              <view class="item-text">
+                 <text style="color:#AAAAAA;font-size:15px;">{{item.specificDddress}}</text>
+                 <text style="color:#AAAAAA;font-size:15px;">{{item.newTime}}</text>
+             </view>  
+         </view>    
+    </view> 
+</view>
+
+<view  hidden="{{change_classify!=1}}">
+   <view class="list-item" wx:for="{{goodsFound}}" wx:key="index"  bindtap="go_goodDetail" data-id="{{item._id}}"  data-browse="{{item.browseTimes}}">
+         <view class="list-item-image">
+            <image src="{{item.image_url1}}"></image>
+         </view> 
+         <view class="list-item-text">
+             <view class="item-text">
+                 <text>{{item.title}}</text>
+                 <text style="color:#27C79A;font-size:15px;">{{item.lostType}}</text>
+             </view> 
+              <view class="item-text">
+                 <text style="color:#AAAAAA;font-size:15px;">类型:{{item.AnnouncementType}}</text>
+                 <text style="color:#AAAAAA;font-size:15px;">浏览{{item.browseTimes}}次</text>
+             </view> 
+              <view class="item-text">
+                 <text style="color:#AAAAAA;font-size:15px;">{{item.specificDddress}}</text>
+                 <text style="color:#AAAAAA;font-size:15px;">{{item.newTime}}</text>
+             </view>  
+         </view>    
+    </view> 
+</view>

@@ -1,0 +1,24 @@
+<!--miniprogram/pages/center/center.wxml-->
+<view class="center_header avatar">
+    <button style="background-image: url({{avatarUrl}});background-size: 100% 100%;"  bindgetuserinfo="onGetUserInfo" open-type="getUserInfo"></button>
+    <text wx:if="{{logged}}">{{userInfo.nickName}}</text>
+    <text wx:else style="font-size:16px;">请点击头像登陆</text>
+</view>
+
+<view class="divider"></view>
+
+
+<view class="center-list">
+     <view class="center-list-item arrow">
+        <button bindtap="go_myPublish">
+          <text>我的发布</text>
+       </button>  
+     </view> 
+      <view class="center-list-item arrow" >
+       <button open-type="contact" session-from="weapp">
+         <text>联系客服</text>
+       </button>  
+     </view>       
+</view>    
+
+

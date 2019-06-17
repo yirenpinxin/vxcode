@@ -1,0 +1,66 @@
+/**index.wxss**/
+.search{
+  background:#EEEEEE;
+  height:86rpx;
+  display:flex;
+  align-items:center;
+
+}
+.search .search-item{
+ display:flex;
+ background:#fff; 
+ width:95%;
+ justify-content:center;
+ align-items:center;
+ margin:0 auto;
+ border-radius:16rpx;
+ height:56rpx;
+}
+.search .search-item image{
+  width:60rpx;
+  height:60rpx;
+  margin-right:120rpx;
+  vertical-align:middle;
+}
+.classify{
+  display:flex;
+  justify-content:space-between; 
+}
+.classify-item{
+  width:50%;
+  text-align:center;
+  margin:24rpx 0;
+}
+.classify .classify-item:first-child{
+   border-right:1px solid black;
+}
+.classify .classify-item:last-child{
+  border-left:1px solid black;
+}
+.green{
+  color:#27C79A; 
+}
+
+/*内容列表*/
+.list-item{
+  display:flex;
+  border-bottom:1px solid #E3E5CE;
+  padding:12rpx;
+}
+
+.list-item .list-item-image image{
+  width:180rpx;
+  height:160rpx;
+}
+.list-item .list-item-text{
+   display:flex;
+   flex-direction: column;
+   justify-content:space-around;
+   width:75%;
+   margin-left:12rpx;
+}
+.list-item .list-item-text .item-text{
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+}

@@ -1,0 +1,74 @@
+<!--miniprogram/pages/publish/publish.wxml-->
+
+<form  bindsubmit="formSubmit" class="publish">
+  <view class="publish-item">
+       <text>标题:</text>
+       <input type="text" placeholder="请输入12字内的标题" maxlength="12" placeholder-style="text-align:right"  name="title" value="{{title}}"/>
+  </view>
+  <view class="publish-item">
+       <text>启事类型:</text>
+       <view class="publish-item-size">
+          <icon  wx:if="{{icon==false}}"  size="22" type="success" color="rgb(39,199,154)"  style="margin-right:10rpx;" bindtap="selecticon"/>
+          <icon  wx:else type="circle"  bindtap="selecticon" style="margin-right:10rpx;"/>       
+          <text >寻物启事</text>
+          <icon  wx:if="{{icon}}" size="22"  type="success" color="rgb(39,199,154)" style="margin-right:10rpx;margin-left:10rpx;" bindtap="selecticon"/>
+          <icon  wx:else type="circle"  bindtap="selecticon" style="margin-right:10rpx;margin-left:10rpx;"/>     
+          <text >失物招领</text>      
+       </view>
+         
+  </view>
+
+  <view class="publish-item">
+       <text>失物类别:</text>
+        <picker  bindchange="bindPickerChange" name="lostType" value="{{array[array_index]}}" range="{{array}}">
+            <view>
+                <text>{{array[array_index]}}</text>
+            </view>         
+         </picker>     
+  </view>
+  <view class="divider"></view>
+
+   <view class="publish-item">
+       <text>发布日期:</text>
+       <text >{{newTime}}</text>
+    </view>
+    <view style="padding:24rpx;border-bottom:1px solid #EFEFEF;">
+       <text>具体地址:</text>
+       <input type="text" placeholder="请填写大概的位置" name="specificDddress"  value="{{specificDddress}}" />
+    </view>
+
+    <view style="padding:24rpx;border-bottom:1px solid #EFEFEF;">
+       <text>物品详情:</text>
+        <textarea name="goodDetail" value="{{goodDetail}}" style="padding-left:160rpx; width:70%;" placeholder="请对物品进行相关描述"></textarea>
+    </view>
+     <view class="divider"></view>
+    
+    
+  <view class="publish-item">
+       <text>联系人:</text>
+       <input type="text" placeholder="请输入联系姓名"  placeholder-style="text-align:right" name="contacts"  value="{{contacts}}"/>
+  </view>
+
+  <view class="publish-item">
+       <text>联系电话:</text>
+       <input type="number" placeholder="请输入联系电话"  maxlength="11" placeholder-style="text-align:right"  name="telephone" value="{{telephone}}"/>
+  </view>
+
+  <view style="padding:24rpx;border-bottom:1px solid #EFEFEF;" >
+       <text>添加图片:</text>
+       <view class="publish-add">
+              <view wx:for="{{image_url}}" wx:key="index" wx:if="{{image_url!=''}}" class="image-item publish-add-images" data-index="{{index}}"> 
+               <image src="{{item}}" bindtap="previewImg" data-index="{{index}}" ></image>
+                <view  data-index="{{index}}" catchtap="deleteImg" data-index="{{index}}">删除</view>
+              </view> 
+           
+            <view class="publish-add-images">
+               <image src="/images/add.png" bindtap="uploadFile"></image>
+            </view>
+       </view>
+  </view>
+
+   <view class="publish-button">
+        <button form-type="submit">发布启事</button>
+  </view>
+</form>

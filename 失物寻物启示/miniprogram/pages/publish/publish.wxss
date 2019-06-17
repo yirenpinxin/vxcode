@@ -1,0 +1,45 @@
+/* miniprogram/pages/publish/publish.wxss */
+.publish .publish-item{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid #EFEFEF;
+  padding:24rpx;  
+}
+.publish .publish-item input{
+   text-align:right;
+}
+.publish-add-images{
+  margin-top:24rpx;
+  margin-left:24rpx;
+}
+.publish-add{
+  display:flex;
+  flex-wrap:wrap;
+}
+.publish-add-images image{
+  width:200rpx;
+  height:200rpx;
+}
+.publish-button{
+  margin-top:36rpx;
+  padding-bottom:72rpx;
+}
+
+.publish .publish-item .publish-item-size{
+    display:flex;
+    font-size:16px;
+}
+
+.publish-button button{
+   width:50%;
+   background:#27C79A;
+   color:#fff;
+}
+.image-item{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-size:14px;
+  color:#908080;
+}
